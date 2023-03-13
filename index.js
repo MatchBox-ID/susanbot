@@ -3126,7 +3126,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 
                     const listMessage = {
                         text: lang.SetAh(),
-                        footer: `© ${ownername}`,
+                        footer: `© Matchbox`,
                         title: salam + ' ' + pushname,
                         buttonText: "Select Here",
                         sections
@@ -3173,7 +3173,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 
                     const listMessage = {
                         text: lang.SetAh(),
-                        footer: `© ${ownername}`,
+                        footer: `© Matchbox`,
                         title: salam + ' ' + pushname,
                         buttonText: "Select Here",
                         sections
@@ -4021,6 +4021,65 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 }
                 if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
                     Alpha.send5ButImg(alpha, m.chat, `Selamat ${salam} ${pushname} 😊\n\n╭─⬣「 _*INFO BOT*_ 」⬣\n│ *Prefix* :  ${prefix} \n│ *Name* : ${botname}\n│ *Owner* : wa.me/${ownernomer.split("@")[0]}\n│ *Mode* : ${alpha.public ? 'Public-Mode' : 'Self-Mode'}\n│ *Runtime* : ${runtime(process.uptime())}\n│ *Lib* : Baileys-Md@5.0.0\n╰─⬣` + '\n\n' + lang.tqto(prefix), '©' + ownername, pp_bot, buttonDefault2, [sender, ownernomer + '@s.whatsapp.net'])
+                }
+            }
+            break
+            case 'example': {
+                if (!m.isGroup) return reply(lang.groupOnly())
+                const listhades = ['example', 'example', 'example', 'example', 'example', 'example']
+                if (!listhades.includes(text)) {
+                    const sections = [{
+                        "title": "✅ OWNER",
+                        "rows": [{
+                            "title": "Hubungi Owner Bot",
+                            "rowId": ".owner"
+                        }]
+                    }, {
+                        "title": "✅ MENU",
+                        "rows": [{
+                            "title": "Menampilkan menu bot",
+                            "rowId": ".menu"
+                        }]
+                    }, {
+                        "title": "✅ ALLMENU",
+                        "rows": [{
+                            "title": "Menampilkan semua menu bot",
+                            "rowId": ".allmenu"
+                        }]
+                    }, {
+                        "title": "✅ MAIN GAME",
+                        "rows": [{
+                            "title": "Menampilkan menu games",
+                            "rowId": ".gamescmd"
+                        }]
+                    }, {
+                        "title": "✅ NSFW MENU",
+                        "rows": [{
+                            "title": "Menampilkan menu nsfw",
+                            "rowId": ".nsfwcmd"
+                        }]
+                    }, {
+                        "title": "✅ KONTRIBUTOR BOT",
+                        "rows": [{
+                            "title": "Orang yang membuat bot ini",
+                            "rowId": ".tqto"
+                        }]
+                    }]
+
+                    const listMessage = {
+                        text: lang.SetAh(),
+                        footer: `© Matchbox`,
+                        title: salam + ' ' + pushname,
+                        buttonText: "Example Menu",
+                        sections
+                    }
+
+                    alpha.sendMessage(m.chat, listMessage, {
+                        quoted: m
+                    })
+                } else {
+                    db.data.settings[botNumber].typemenu = text
+                    reply(lang.ok())
                 }
             }
             break
@@ -7500,7 +7559,7 @@ ${prefix}nuliskiri Subscribe Ya YT zeeoneofc`)
                     }]
                     const listMessage = {
                         text: "\nScreenshot Website",
-                        footer: `© ${ownername}`,
+                        footer: `© Matchbox`,
                         title: salam + ' ' + pushname,
                         buttonText: "Select Here",
                         sections
